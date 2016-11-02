@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@font-face {font-family: "Snell Roundhand Script V2";
+    src: url("fonte/2bd3372d24f66349c0f3c5d10d0735c8.eot");
+    src: url("fonte/2bd3372d24f66349c0f3c5d10d0735c8.eot?#iefix") format("embedded-opentype"),
+    url("fonte/2bd3372d24f66349c0f3c5d10d0735c8.woff2") format("woff2"),
+    url("fonte/2bd3372d24f66349c0f3c5d10d0735c8.woff") format("woff"),
+    url("fonte/2bd3372d24f66349c0f3c5d10d0735c8.ttf") format("truetype"),
+    url("fonte/2bd3372d24f66349c0f3c5d10d0735c8.svg#Snell Roundhand Script V2") format("svg");
+}
+
+#container{
+    /*modificar altura e lagura;*/
+    width: 1000px;
+    height: 600px;
+    /* ------------------------ */
+    border: 1px solid darkblue;
+    position: relative;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+}
+
+#container-botao{
+    display: block;
+}
+
+.botao {
+    position: relative;
+    margin-top: 10px;
+    left:45%;
+    background: #41aaf0;
+    background-image: linear-gradient(top, #41aaf0, #2980b9);
+    background-image: linear-gradient(to bottom, #41aaf0, #2980b9);
+    border: none;
+    border-radius: 0px;
+    text-shadow: 1px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+.botao:disabled{
+    background: #000000;
+    background-image: linear-gradient(top, #777777, #4876a1);
+    background-image: linear-gradient(to bottom, #777777, #777777);
+    color: #696460;
+    text-decoration: none;
+}
+
+#container-titulo{
+    display: none;
+    text-align: center;
+    font-family: "Snell Roundhand Script V2";
+    font-size: 40px;
+    padding: 20px 20px 15px 100px;
+}
+
+.carta{
+    width: 10.7385%;
+    height: 24.3655%;
+    position: absolute;
+    border-radius: 10px;
+    perspective: 600px;
+    left: 0.3355%;
+    top: 0.5076%;
+}
+
+.descricaoCarta{
+    height: 100px;
+    background-color: transparent;
+    position: absolute;
+    text-align: center;
+    font-family: "Snell Roundhand Script V2";
+    font-size: 33px;
+}
+
+.carta:hover{
+    box-shadow: 0 0 10px crimson;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s ;
+    backface-visibility: hidden;
+}
+
+.verso{
+    background: url("../imagens/verso.jpg");
+    background-size: 100% 100%;
+}
+
+.verso.virada{
+    transform: rotateY(180deg);
+}
+
+.frente{
+    transform: rotateY(-180deg);
+    background-size: 100% 100% !important;
+}
+
+.frente.virada{
+    transform: rotateY(0deg);
+    background-size: 100% 100% !important;
+}
+
+#modal{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0 ,0, 0.5);
+    visibility: hidden;
+    z-index: -2;
+
+}
+
+#modal-container{
+    text-align: center
+}
+
+#modal-container-botao{
+    margin-bottom: 5%;
+}
+
+#carta-escolhida{
+    margin-top: 5%;
+    left: 45%;
+    width: 250px;
+    height: 400px;
+    position: absolute;
+    border-radius: 10px;
+    perspective: 600px;
+    background-size: 100% 100% !important;
+}
+
+#carta-escolhida-frente{
+    background-size: 100% 100% !important;
+}
+
+.descricao{
+    font-family: "Snell Roundhand Script V2";
+    color: whitesmoke;
+    font-size: 35px;
+    text-shadow:2px 0 0 black;
+}
+
+#texto{
+    font-family: "Snell Roundhand Script V2";
+    text-align: center;
+    width: 500px;
+    word-wrap: break-word;
+    margin-top: 20px;
+    margin-left: -125px;
+}

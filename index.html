@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Cartas</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+</head>
+<body>
+
+    <div id="container-botao">
+        <button id="botao" type="button" class="botao" onclick="posicionarCartas">Embaralhar Cartas</button>
+    </div>
+
+    <div id="container-titulo">
+        <p>Concentre-se...<p>Faça sua pergunta</p></p>
+    </div>
+
+    <div id="container">
+
+    </div>
+
+    <div id="modal">
+        <div id="modal-container">
+            <div id="carta-escolhida" style="position: relative">
+                <div id="carta-escolhida-frente" class="face" style="position: relative !important;"></div>
+                <div id="carta-numero" class="descricao"></div>
+                <div id="carta-titulo" class="descricao"></div>
+                <div id="texto" class="descricao"></div>
+                <div id="modal-container-botao">
+                    <button id="botao-modal" type="button" class="botao" onclick="criarOpcoes()" style="left: 0px !important;">Jogar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
