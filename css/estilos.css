@@ -4,10 +4,6 @@
     color: black;
 }
 
-body{
-    background-color: darkgrey;
-}
-
 body.modal-open {
     overflow: hidden;
 }
@@ -23,8 +19,8 @@ body.modal-open {
 
 #container{
     /*modificar altura e lagura;*/
-    width: 1000px;
-    height: 600px;
+    width: 685px;
+    height: 325px;
     /* ------------------------ */
     border: 1px solid darkblue;
     position: relative;
