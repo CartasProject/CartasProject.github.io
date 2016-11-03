@@ -147,10 +147,9 @@ function criarOpcoes() {
     }
 
     document.getElementById("botao").disabled = true;
+    document.getElementById("container-botao").style.display = "none";
 
     document.getElementById("container-titulo").style.display = "none";
-    document.getElementById("container-botao").style.display = "block";
-
     modal.style.display="none";
     modal.style.zIndex = -2;
 
@@ -192,6 +191,8 @@ function selecionarOpcao(){
 function criarCartas() {
 
     limparMesa();
+
+    document.getElementById("container-botao").style.display = "block";
 
     var contador = 0;
     while (contador < totalCartas){
